@@ -1,13 +1,26 @@
 var submit = document.getElementById("submit");
 
 submit.onclick = function() {
-	var name = document.getElementById("name").value;
-	var birth = document.getElementById("birth").value;
-	var genres = document.getElementById("genres").value;
-	var message = document.getElementById("message");
-	console.log(name, birth);
 
-	message.innerHTML = " Hello, my name and gamertag is " + name  
-	 +  " my hometown and birthday is " + birth;
+	var rname = document.getElementById("rname").value;
+	var gtname = document.getElementById("gtname").value;
+	var birthTown = document.getElementById("birthTown").value;
+	var birthDay = document.getElementById("birthDay").value;
+	var firstGame = document.getElementById("firstGame").value;
+	var message = document.getElementById("message");
+
+	var genres = document.getElementById("genres").value;
+	var gamerType = document.getElementById("gamerType").value;
+	var console = document.getElementById("console").value;
+	var store = document.getElementById("store").value;
+	var hours = document.getElementById("hours").value;
+
+	message.innerHTML = " Hello, my name is " + rname + 
+	", my gamertag is. " + gtname +  " I was born in " + birthTown + 
+	" on, " + birthDay + " and my first game was " + firstGame +
+	". My favorite game genre is " + genres + 
+	", the kind of gamer that I am is a " + gamerType + " gamer. " +
+	" My preferred console is a " + console + " I buy my games " +
+	store + ". I spend " + hours + " a week playing games. ";
 	
 };
