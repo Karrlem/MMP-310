@@ -35,9 +35,11 @@ ul{
 }
 
 ul li{
+    font-size:16px;
 	display:inline-block;
 	margin-right:1em;
 	position:relative;
+    width 200px;
 }
 img{width:200px;}
 
@@ -45,6 +47,7 @@ ul li ul{
 	display:none;
 	position: absolute;
 	left: 0;
+    top 1.4em;
 }
 
 ul li:hover ul{
