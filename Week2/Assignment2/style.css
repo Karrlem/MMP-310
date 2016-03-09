@@ -1,0 +1,12 @@
+*{background-color: grey;}
+
+h1{text-decoration: underline;}
+
+#name{width:200px;
+	  height:15px;
+}
+
+#birth{
+	 width: 220px;
+	 height:15px;
+}
