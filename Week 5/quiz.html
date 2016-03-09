@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<!-- CSS -->
+<style>
+div#quiz{border:#000 1px solid; padding:10px 40px 40px 40px;}    
+</style>
+<!-- End CSS -->
+
+<!-- Javascript -->
+<script>
+var pos = 0, quiz, quiz_status, statement, choice, choices, chA, chB, correct = 0;
+var statements = [
+    ["1. The sky is blue.","True","False","A" ],
+    ["2. Sharks are mammals.","True","False","B" ],
+    ["3. Herbivores eat meat.","True","False","B" ],
+    ["4. Atomic bombs work by atomic fission.","True","False","A" ],
+    ["5. The human body has four lungs.","True","False","B"]
+];
+function _(x){
+    return document.getElementById(x);
+}
+function renderStatement(){
+    quiz = _("quiz");
+    if(pos >= statements.length){
+        quiz.innerHTML = "<h2>You got "+correct+" of "+statements.length+" questions correct</h2>";
+        _("quiz_status").innerHTML = "Quiz Completed";
+        pos = 0;
+        correct = 0;
+        return false;
+    }    
+    _("quiz_status").innerHTML = "Statement " +(pos+1)+" of " +statements.length;
+    statement = statements[pos][0];
+    chA = statements[pos][1];
+    chB = statements[pos][2];
+    quiz.innerHTML = "<h3>"+statement+"</h3>";
+    quiz.innerHTML += "<input type='radio' name='choices' value='A'> "+chA+"<br>";
+	quiz.innerHTML += "<input type='radio' name='choices' value='B'> "+chB+"<br><br>";
+    quiz.innerHTML += "<button onclick='checkAnswer()'>Submit Answer</button>";
+}
+function checkAnswer(){
+    choices = document.getElementsByName("choices");
+    for(var i = 0; i < choices.length; i++){
+        if(choices[i].checked){
+        choice = choices[i].value;
+        }
+    }
+    if(choice == statements[pos][3]){
+        correct++;
+    }
+    pos++;
+    renderStatement();
+}    
+window.addEventListener("load", renderStatement, false);    
+</script>
+<!-- End Javascript -->
+
+</head>
+<body>
+<h2 id="quiz_status"></h2>    
+<div id = "quiz"></div> 
+
+</body>        
+</html>
