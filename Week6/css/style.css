@@ -1,0 +1,13 @@
+*{
+
+    text-align: center;
+    background-color: dimgray;
+}
+
+#taskList,li,ol{
+     border: 10px;
+    border-style: double;
+    border-color: black;
+    list-style-type: upper-roman;
+    color: white;
+}
