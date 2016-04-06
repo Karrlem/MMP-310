@@ -7,3 +7,4 @@ This is all of my work for MMP 310
 - [Week 4](Week4/)
 - [Week 5](Week5/)
 - [Week 6](Week6/)
+- [Week 8](Week8/)
