@@ -1,8 +1,8 @@
 var selections = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'];
 
-var images = ["hangman1.png", "hangman2.png"];
+var images = ["hangman.png", "hangman1.png", "hangman2.png","hangman3.png","hangman4.png", "hangman5.png","hangman6.png"];
 var imageNumber = 0;
-var sentence = ["hangman is coo"];
+var sentence = ["hangman is cool"];
 var lives = 6;
 
 for (var i = 0; i < sentence[0].length; i++) {
@@ -48,6 +48,7 @@ function checkLetter(letter) {
 			document.getElementById("lives").innerHTML =" you have " + lives + " lives ";
 			lives --;
 		} else {
+			document.getElementById("hangman").src = images[imageNumber];
 			document.getElementById("lives").innerHTML =" you lose ";
 		}
 	}
