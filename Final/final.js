@@ -9,12 +9,12 @@ var hitEnemy;
 var die;
 var MARGIN = 40;
 var submit = document.getElementById("submit");
-var score;
+var input, button;
 
 //var randomSprite;
 function preload(){
 	stage = loadSound('sounds/stage.mp3');
-	stage.play();
+
 
 }
 function setup(){
@@ -26,6 +26,16 @@ soundFormats('mp3');
 shoot = loadSound('sounds/shoot.mp3');
 die = loadSound('sounds/playerexplosion.mp3');
 hit = loadSound('sounds/hit.mp3');
+stage.setVolume(0.4);
+stage.loop();
+
+input = createInput();
+input.position(20,65);
+
+button = createButton('submit');
+button.position(150, 65);
+button.mousePressed(restart);
+
 
 player = createSprite(width/2, height/2);
 
@@ -145,3 +155,7 @@ function enemySpawn(){
   createEnemy(3, px, py);
 }
 setInterval(enemySpawn, 10000);
+
+function restart(){
+	window.location.reload();
+}
