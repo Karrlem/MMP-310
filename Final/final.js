@@ -41,7 +41,7 @@ player.addImage("normal",playerImage);
 player.maxSpeed = 10;
 player.friction = .98;
 player.setCollider("circle",0,0,32);
-player.debug = true;
+//player.debug = true;
 
 enemies = new Group();
 bullets = new Group();
@@ -107,7 +107,7 @@ if(keyWentDown("space") && !playerdead){
 	bullet.life = 30;
 	bullets.add(bullet);
 	shoot.play();
-	bullet.debug = true;
+//	bullet.debug = true;
 
 	}
 	drawSprites();
@@ -134,7 +134,7 @@ function createEnemy(type, x, y){
 
 		});
 	}
-	e.debug = true;
+//	e.debug = true;
 	e.type = type;
 
 	if(type == 2)
