@@ -153,6 +153,7 @@ bullet.remove();
 	texty = enemy.position.y;
 	a = 255;
 enemy.remove();
+hit.play();
 enemySpawn();
 	score += 100;
 }
