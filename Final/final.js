@@ -25,7 +25,7 @@ function preload(){
 function setup(){
 createCanvas(800,600);
 bg = loadImage("images/MMP310FinalBackground.png");
-playerImage = loadImage("images/mmp310finalPlayer.png");
+playerImage = loadImage("images/player.png");
 bulletImage = loadImage("images/bullet.png");
 soundFormats('mp3');
 shoot = loadSound('sounds/shoot.mp3');
